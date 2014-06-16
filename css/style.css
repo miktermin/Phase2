@@ -1,0 +1,15 @@
+#header
+{
+    background-color: black;
+    height: 40px;
+}
+
+.tabs
+{
+    color: white;
+    line-height: 40px;
+    font-weight: bold;
+    border-right: 1px solid #524D4D;
+    margin-left: 35px;
+    cursor: pointer;
+}

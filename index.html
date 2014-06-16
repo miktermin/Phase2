@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Phase 2</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script data-main="main.js" src="js/lib/require.js"></script>
+        <script src="js/lib/require.config.js"></script>
+    </head>
+
+    <body>
+        <div class="row" id="header" data-bind="foreach: tabs()">
+            <div class="span1 tabs" data-bind="text: title, click: $parent.changeHash">
+            </div>
+        </div>
+    </body>
+</html>
