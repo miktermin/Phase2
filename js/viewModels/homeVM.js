@@ -13,22 +13,15 @@ define(['knockout'], function(ko) {
             window.location.hash = tab.title;
         };
 
-        routie({
-            'Home': function() {
-                alert("Clicked tab is Home");
-            },
-            'Tab1': function() {
-                alert("Clicked tab is Tab1");
-            },
-            'Tab2': function() {
-                alert("Clicked tab is Tab2");
-            },
-            'Tab3': function() {
-                alert("Clicked tab is Tab3");
-            },
-            'Tab4': function() {
-                alert("Clicked tab is Tab4");
-            }
-        });
-    };
+        this.getHash = function() {
+            var hash = window.location.hash.substring(1);
+            return hash;
+        }
+
+        routie('*', function() {
+                if(self.getHash()) {
+                    alert("Clicked tab is " + self.getHash());
+                }
+            });
+    }
 });
